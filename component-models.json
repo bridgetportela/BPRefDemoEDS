@@ -34,7 +34,6 @@
           "name": "theme",
           "label": "Theme",
           "description": "Note: This takes priority over CF based theme.",
-
           "options": [
             {
               "name": "default",
@@ -59,6 +58,10 @@
             {
               "name": "WeHealthcare Theme",
               "value": "wehealthcare-theme"
+            },
+            {
+              "name": "Tommy Bahama Theme",
+              "value": "tommy-bahama-theme"
             }
           ]
       },
