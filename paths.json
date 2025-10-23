@@ -1,7 +1,8 @@
 {
   "mappings": [
-    "/content/BPRefDemoEDS/language-masters/en:/",
     "/content/BPRefDemoEDS/language-masters/en/:/en/",
+    "/content/BPRefDemoEDS/language-masters/en:/",
+    "/content/BPRefDemoEDS/language-masters/en:/en",
     "/content/BPRefDemoEDS/language-masters/fr/:/fr/",
     "/content/BPRefDemoEDS/language-masters/fr:/fr",
     "/content/BPRefDemoEDS/language-masters/es/:/es/",
