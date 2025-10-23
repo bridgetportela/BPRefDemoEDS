@@ -1040,6 +1040,12 @@
         "label": "Title"
       },
       {
+        "component": "richtext",
+        "name": "description",
+        "label": "Description",
+        "valueType": "string"
+      },
+      {
         "component": "select",
         "name": "teaserStyle",
         "value": "image",

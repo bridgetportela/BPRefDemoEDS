@@ -483,5 +483,15 @@ header nav .nav-tools .lang-switcher { display: inline-flex; }
   body.wehealthcare-theme header nav .nav-sections ul > li > a{
     color:#000;
   }
+}
 
+/* ---------- Tommy Bahama Theme Overrides -------------- */
+.tommy-bahama-theme header {
+  position: unset !important;
+}
+
+@media (width >= 900px) {
+  .tommy-bahama-theme header {
+    min-height: 103px;
+  }
 }
