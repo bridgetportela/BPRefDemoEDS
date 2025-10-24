@@ -487,7 +487,7 @@ header nav .nav-tools .lang-switcher { display: inline-flex; }
 
 /* ---------- Tommy Bahama Theme Overrides -------------- */
 .tommy-bahama-theme header {
-  position: unset !important;
+  position: relative !important;
 }
 
 @media (width >= 900px) {

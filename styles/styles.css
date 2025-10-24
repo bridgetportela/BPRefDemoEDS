@@ -1083,3 +1083,7 @@ table {
 .tommy-bahama-theme .button-container a:hover {
   color: inherit !important;
 }
+
+.tommy-bahama-theme header {
+  position: relative !important;
+}
