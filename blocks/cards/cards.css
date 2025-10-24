@@ -458,3 +458,44 @@
   }
   
 }
+
+/*--------- Tommy Bahama Styles --------- */  
+.tommy-bahama-theme .cards > ul > li {
+  box-shadow: none;
+  border: none;
+  border-radius: 0; 
+}
+
+.tommy-bahama-theme .cards > ul > li .cards-card-image img {
+  object-fit: cover;
+} 
+
+.tommy-bahama-theme .cards > ul > li .cards-card-body {
+  padding: 1rem;
+  text-align: center;
+  font-size: 24px;
+}
+
+.tommy-bahama-theme .cards > ul > li .cards-card-body p {
+  margin: 0;
+}
+
+.tommy-bahama-theme .cards > ul > li .cards-card-body p a {
+  font-size: 18px;
+  text-decoration: underline;
+}
+
+.tommy-bahama-theme .cards > ul > li .cards-card-body p a::after {
+  display: none;
+}
+
+@media (width >= 900px) {
+  .tommy-bahama-theme .cards > ul {
+    gap: 0;
+  }
+
+  .tommy-bahama-theme .cards > ul > li .cards-card-image img {
+    height: 650px;
+    max-height: unset;
+  } 
+}

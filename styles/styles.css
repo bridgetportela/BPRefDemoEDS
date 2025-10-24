@@ -1079,3 +1079,7 @@ table {
 .tommy-bahama-theme .section > div {
   max-width: 1800px;
 }
+
+.tommy-bahama-theme .button-container a:hover {
+  color: inherit !important;
+}
