@@ -1,6 +1,6 @@
 import {
   div, a, span, img, video, source, button,
-  h1,
+  h1, p
 } from '../../scripts/dom-helpers.js';
 import { readBlockConfig } from '../../scripts/aem.js';
 
@@ -39,7 +39,8 @@ function createVideoPlayer(videoSrc) {
 function createBackgroundImage(properties) {
   let missingSrc;
   if (!properties.imageref) missingSrc = true;
-  const imgSrc = (!missingSrc) ? properties.imageref : '';
+  // const imgSrc = (!missingSrc) ? properties.imageref : '';
+  const imgSrc = !missingSrc ? properties.imageref.replace('width=750', 'width=2000') : ''; // attempt to get higher res image
   const imgAlt = (properties.imagealt) ? properties.imagealt : '';
   const imgBackground = div({ class: 'background-image' },
     img({ class: 'teaser-background', src: imgSrc, alt: imgAlt }),
@@ -146,6 +147,7 @@ export default function decorate(block) {
       ),
       div({ class: 'teaser-title-wrapper' },
         h1({ class: 'teaser-title' }),
+        p({ class: 'teaser-description' }, properties.description ? properties.description : ''),
         div({ class: buttonContainerClass },
           a({ id: 'button', href: buttonLink, class: `button ${buttonStyle}` },
             span({ class: 'button-text' }, buttonText),

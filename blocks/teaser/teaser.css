@@ -96,6 +96,10 @@ html[dir="rtl"] .teaser-wrapper .video-container .video-pause .video-pause-btn{
     line-height: 40px;
 }
 
+.teaser-wrapper .teaser-description {
+    color: var(--text-light)
+}
+
 html[lang="ru"] .teaser-wrapper .teaser-title {
     padding: 0;
     font-size: 1.5rem;
@@ -332,4 +336,45 @@ html[lang="ru"] .teaser-wrapper .button-container > a {
         width: 425px;
     }
     
+}
+
+
+/* ------------------- Tommy Bahama Theme Overrides ------------------- */
+.tommy-bahama-theme .teaser-wrapper {
+    max-width: 100%;
+    padding: 0;
+}
+
+.tommy-bahama-theme .teaser-wrapper .background-image {
+    height: 100%;
+}
+
+.tommy-bahama-theme .teaser-wrapper .teaser-background {
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.tommy-bahama-theme .teaser-wrapper .teaser-swoosh-wrapper {
+    height: 100%;
+    width: 100%;
+    margin-right: 0;
+    visibility: visible !important;
+    display: flex !important;
+}
+
+.tommy-bahama-theme .teaser-wrapper .teaser-title-wrapper {
+    height: 100%;
+    width: 100%;
+    top: unset;
+    left: unset;
+    transform: unset;
+    justify-content: flex-start;
+}
+
+.tommy-bahama-theme .teaser-wrapper .teaser-title-wrapper * {
+    color: #000;
+}
+
+.tommy-bahama-theme .teaser-wrapper .teaser-title {
+    padding-top: 3%;
 }
