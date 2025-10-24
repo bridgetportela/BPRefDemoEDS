@@ -87,10 +87,68 @@
 }
 
 @media (width < 768px) { 
-
   .columns-container .columns-wrapper {
     padding: 0 4%;
   }
 
 }
 
+/* ------------ Tommy Bahama Styles ------------ */
+.tommy-bahama-theme .columns-row > div:first-of-type{
+  order: 1;
+}
+
+.tommy-bahama-theme .columns-row > div:last-of-type{
+  order: 0;
+  text-align: center;
+}
+
+.tommy-bahama-theme .columns-row > div:last-of-type h2 {
+  font-size: 40px !important;
+}
+
+.tommy-bahama-theme .columns-row > div:last-of-type p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.tommy-bahama-theme .columns-row > div:last-of-type p.button-container a {
+  border: 1.5px solid #000;
+  border-radius: 6px;
+  padding: 10px 20px;
+  margin-top: 1rem;
+  font-size: 18px;
+  max-width: 250px;
+  text-overflow: unset;
+  overflow: unset;
+  text-wrap: wrap;
+  text-align: center;
+}
+
+.tommy-bahama-theme .columns-row > div:last-of-type p.button-container a::after {
+  display: none;
+}
+
+.tommy-bahama-theme .columns-row .columns-img-col img {
+  max-height: unset;
+}
+
+@media (width > 1024px) {
+  .tommy-bahama-theme .columns-row > div:first-of-type {
+    width: 60%;
+    flex: unset;
+    order: 0;
+  } 
+
+  .tommy-bahama-theme .columns-row > div:last-of-type {
+    width: 40%;
+    flex: unset;
+    order: 1;
+    padding: 4em;
+    text-align: start;
+  } 
+
+  .tommy-bahama-theme .columns-row > div:last-of-type p {
+    font-size: 20px;
+  }
+}
