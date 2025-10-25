@@ -469,3 +469,64 @@
 .content-fragment-wrapper .content-fragment .banner-content .banner-detail.text-right .cftitle::after {
   margin-right: 0;
 }
+
+
+/* ---------- Tommy Bahama Styles -------------- */
+.tommy-bahama-theme .content-fragment-wrapper .content-fragment .banner-content .banner-detail {
+  
+}
+
+.tommy-bahama-theme .content-fragment-wrapper {
+  max-width: 1600px !important;
+}
+
+.tommy-bahama-theme .content-fragment-wrapper .content-fragment .banner-content .banner-detail .cftitle {
+  font-size: 50px;
+  line-height: 60px;
+  font-family: var(--heading-font-family);
+}
+
+.tommy-bahama-theme .content-fragment-wrapper .content-fragment .banner-content .banner-detail .cftitle::after{
+  display: none;
+}
+
+.tommy-bahama-theme .content-fragment-wrapper .content-fragment .banner-content .banner-detail a {
+  max-width: 200px;
+  width: 100%;
+  text-align: center;
+  padding: 15px 20px !important;
+  border-radius: 10px;
+  border: none !important;
+}
+
+.tommy-bahama-theme .content-fragment-wrapper .content-fragment .banner-content .banner-detail a::after {
+  display: none;
+}
+
+@media (width >= 1024px) {
+  .tommy-bahama-theme .content-fragment-wrapper .content-fragment .banner-content .banner-detail {
+    min-height: 800px;
+    background-position: unset;
+    padding: 12rem;
+  }
+
+  .tommy-bahama-theme .content-fragment-wrapper .content-fragment .banner-content .banner-detail .cftitle {
+    max-width: 400px;
+    text-align: center;
+    font-size: 60px;
+  }
+
+  .tommy-bahama-theme .content-fragment-wrapper .content-fragment .banner-content .banner-detail .cfdescription {
+    max-width: 400px;
+    text-align: center;
+    font-size: 20px;
+  }
+
+
+  .tommy-bahama-theme .content-fragment-wrapper .content-fragment .banner-content .banner-detail .button-container {
+    max-width: 400px;
+    text-align: center;
+    width: 100%;
+  }
+
+}

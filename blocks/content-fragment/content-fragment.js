@@ -97,7 +97,6 @@ export default async function decorate(block) {
         }
 
         const cfReq = offer?.data?.promotionBannerByPath?.item;
-        console.log("cfReq: ", cfReq);
 
         if (!cfReq) {
           console.error('Error parsing response from GraphQL request - no valid data found', {
@@ -111,7 +110,7 @@ export default async function decorate(block) {
         // Set up block attributes
         const itemId = `urn:aemconnection:${contentPath}/jcr:content/data/${variationname}`;
         block.setAttribute('data-aue-type', 'container');
-        const imgUrl = isAuthor ? cfReq.bannerimage?._authorUrl : cfReq.bannerimage?._publishUrl;
+        const imgUrl = isAuthor ? cfReq.image?._authorUrl : cfReq.image?._publishUrl;
 
         // Determine the layout style
         const isImageLeft = displayStyle === 'image-left';
@@ -138,25 +137,22 @@ export default async function decorate(block) {
           bannerContentStyle = 'background-image: url('+imgUrl+');';
         }  else {
           // Default layout: image as background with gradient overlay (original behavior)
-          bannerDetailStyle = 'background-image: linear-gradient(90deg,rgba(0,0,0,0.6), rgba(0,0,0,0.1) 80%) ,url('+imgUrl+');';
+          bannerDetailStyle = 'background-image: url('+imgUrl+');';
         }
 
         block.innerHTML = `<div class='banner-content block ${displayStyle}' data-aue-resource=${itemId} data-aue-label="Promotion Banner - Content fragment" data-aue-type="reference" data-aue-filter="contentfragment" style="${bannerContentStyle}">
           <div class='banner-detail ${alignment}' style="${bannerDetailStyle}" data-aue-prop="bannerimage" data-aue-label="Main Image" data-aue-type="media" >
-                <p data-aue-prop="title" data-aue-label="Title" data-aue-type="text" class='cftitle'>${cfReq?.title}</p>
-                <p data-aue-prop="subtitle" data-aue-label="SubTitle" data-aue-type="text" class='cfsubtitle'>${cfReq?.subtitle}</p>
+            <p data-aue-prop="title" data-aue-label="Title" data-aue-type="text" class='cftitle'>${cfReq?.title}</p>
                 
-                <div data-aue-prop="description" data-aue-label="Description" data-aue-type="richtext" class='cfdescription'><p>${cfReq?.description?.plaintext || ''}</p></div>
-                 <p class="button-container ${ctaStyle}">
-                  <a href="${cfReq?.ctaUrl ? cfReq.ctaUrl : '#'}" data-aue-prop="ctaUrl" data-aue-label="Button Link/URL" data-aue-type="reference"  target="_blank" rel="noopener" data-aue-filter="page" class='button'>
-                    <span data-aue-prop="ctalabel" data-aue-label="Button Label" data-aue-type="text">
-                      ${cfReq?.ctalabel}
-                    </span>
-                  </a>
-                </p>
-            </div>
-            <div class='banner-logo'>
-            </div>
+            <div data-aue-prop="description" data-aue-label="Description" data-aue-type="richtext" class='cfdescription'><p>${cfReq?.description?.plaintext || ''}</p></div>
+            <p class="button-container ${ctaStyle}">
+              <a href="${cfReq?.ctaUrl ? cfReq.ctaUrl : '#'}" data-aue-prop="ctaUrl" data-aue-label="Button Link/URL" data-aue-type="reference"  target="_blank" rel="noopener" data-aue-filter="page" class='button'>
+                <span data-aue-prop="ctalabel" data-aue-label="Button Label" data-aue-type="text">
+                  ${cfReq?.ctaLabel}
+                </span>
+              </a>
+            </p>
+          </div>
         </div>`;
         
     
