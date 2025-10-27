@@ -1,7 +1,7 @@
 import { createOptimizedPicture } from '../../scripts/scripts.js';
 
 export default async function decorate(block) {
-  const products = 'https://main--demo-boilerplate--lamontacrook.hlx.page/misc/products.json?sheet=tory-burch';
+  const products = 'https://main--demo-boilerplate--lamontacrook.hlx.page/misc/products.json?sheet=tommy-bahama';
 
   const lastDiv = [...block.children].pop();
   let skus = lastDiv.querySelector('p');
