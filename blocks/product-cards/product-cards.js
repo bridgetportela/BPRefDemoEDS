@@ -21,6 +21,13 @@ export default async function decorate(block) {
         div.innerHTML = `<img src="${product['Image {width:80}']}" alt="${product['Product Name']}">`;
         const p = document.createElement('p');
         p.textContent = product['Product Name'];
+
+        // product price 
+        const price = document.createElement('div');
+        const priceValue = parseFloat(product["Price"]);
+        price.textContent = isNaN(priceValue) ? "N/A" : `$${priceValue.toFixed(2)}`;
+        p.append(price);
+
         li.append(div, p);
         ul.append(li);
       }
